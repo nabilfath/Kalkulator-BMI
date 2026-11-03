@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.bmi.BMIController"
+      alignment="CENTER"
+      spacing="14.0"
+      prefWidth="420.0"
+      prefHeight="560.0">
+
+    <padding>
+        <Insets top="28.0" right="32.0" bottom="28.0" left="32.0"/>
+    </padding>
+
+    <Label text="KALKULATOR BMI" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="Body Mass Index" style="-fx-font-size: 13px;"/>
+    <Separator/>
+
+    <Label text="Nama Pengguna"/>
+    <TextField fx:id="txtNama" promptText="Masukkan nama"/>
+
+    <Label text="Berat Badan (kg)"/>
+    <TextField fx:id="txtBerat" promptText="Contoh: 60"/>
+
+    <Label text="Tinggi Badan (cm)"/>
+    <TextField fx:id="txtTinggi" promptText="Contoh: 170"/>
+
+    <HBox alignment="CENTER" spacing="12.0">
+        <Button text="Hitung BMI" onAction="#hitungBMI"/>
+        <Button text="Reset" onAction="#reset"/>
+    </HBox>
+
+    <Separator/>
+    <Label fx:id="lblHasil" text="BMI: -" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <Label fx:id="lblKategori" text="Kategori: -" wrapText="true"/>
+</VBox>
